@@ -1,9 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
+    font-family: "Poppins", serif;
 }
 
 body{
     background-image: url(img/background.jpg);
+}
+
+a{
+    text-decoration: none;
+    color: #eee;
+}
+
+.navbar{
+    margin: 20px 0px 20px 30px;
+    width: 1140px;
+    max-width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+.menu> a{
+    font-size: 30px;
+    color: #eee;
+    margin-right: 40px;
+}
+
+.slide {
+    position: relative; /* Agar tombol bisa diposisikan relatif terhadap slide */
+    text-align: center; /* Center align untuk gambar dan tombol */
+}
+
+.warp-imgSlide{
+    max-width: 200px;
+}
+
+.imgSlide{
+    width: 90%;
+    height: auto
+}
+
+.w3-section {
+    margin-top: 10px; /* Jarak antara gambar dan tombol */
+}
+
+button {
+    padding: 10px 15px; /* Padding untuk tombol */
+    margin: 5px; /* Jarak antar tombol */
+    background-color: #4CAF50; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghilangkan border default */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+}
+
+button:hover {
+    background-color: #45a049; /* Warna latar belakang saat hover */
 }
 
