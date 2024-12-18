@@ -32,8 +32,8 @@ a{
 }
 
 .slide {
-    position: relative; /* Agar tombol bisa diposisikan relatif terhadap slide */
-    text-align: center; /* Center align untuk gambar dan tombol */
+    position: relative;
+    text-align: center; 
 }
 
 .warp-imgSlide{
@@ -46,20 +46,20 @@ a{
 }
 
 .w3-section {
-    margin-top: 10px; /* Jarak antara gambar dan tombol */
+    margin-top: 10px;
 }
 
 button {
-    padding: 10px 15px; /* Padding untuk tombol */
-    margin: 5px; /* Jarak antar tombol */
-    background-color: #4CAF50; /* Warna latar belakang tombol */
-    color: white; /* Warna teks tombol */
-    border: none; /* Menghilangkan border default */
-    border-radius: 5px; /* Sudut melengkung */
-    cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
-}
+    padding: 10px 15px; 
+    margin: 5px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+} 
 
 button:hover {
-    background-color: #45a049; /* Warna latar belakang saat hover */
+    background-color: #45a049; 
 }
 

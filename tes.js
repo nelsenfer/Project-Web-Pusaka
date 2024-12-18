@@ -10,29 +10,48 @@ const keriss = [
     img: "img/keris 2.jpg",
   },
 ];
-console.log(keriss);
+let currentSlide = 0;
+
+function plusDivs(n) {
+  currentSlide += n;
+  if (currentSlide < 0) {
+    currentSlide = keriss.length - 1; // Kembali ke slide terakhir
+  } else if (currentSlide >= keriss.length) {
+    currentSlide = 0; // Kembali ke slide pertama
+  }
+  showSlide(currentSlide); // Tampilkan slide yang baru
+}
+
+function showSlide(index) {
+  const keterangan = document.createElement("div");
+  keterangan.innerHTML = `
+      <h2>${keriss[index].nama}</h2>
+      <p>${keriss[index].isi}</p>`;
+
+  const deskripsi = document.getElementById("deskripsi");
+  deskripsi.innerHTML = "";
+  deskripsi.appendChild(keterangan);
+
+  // Menampilkan gambar yang sesuai dengan slide saat ini
+  let x = document.getElementsByClassName("imgSlide");
+  for (let i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; // Sembunyikan semua gambar
+  }
+  x[index].style.display = "block"; // Tampilkan gambar yang sesuai
+}
 
 document.addEventListener("DOMContentLoaded", function () {
-  const deskripsi = document.getElementById("deskripsi");
   const slideitem = document.getElementById("slide");
   keriss.forEach((keris) => {
-    const keterangan = document.createElement("div");
-    keterangan.className = "keterangan";
-    keterangan.innerHTML = `
-        <h2>${keris.nama}</h2>
-        <p>${keris.isi}</p>`;
-    deskripsi.appendChild(keterangan);
-
     const imgSlide = document.createElement("div");
     imgSlide.className = "warp-imgSlide";
     imgSlide.innerHTML = `
-        <img class="imgSlide" src="${keris.img}"style="display: none;">`;
-
+        <img class="imgSlide" src="${keris.img}" style="display: none;">`;
     slideitem.appendChild(imgSlide);
   });
 
-  let slideIndex = 1;
-  showDivs(slideIndex);
+  showSlide(currentSlide);
+
   const buttonContainer = document.createElement("div");
   buttonContainer.className = "w3-section";
   buttonContainer.innerHTML = `
@@ -40,23 +59,3 @@ document.addEventListener("DOMContentLoaded", function () {
         <button onclick="plusDivs(1)">Next ❯</button>`;
   slideitem.appendChild(buttonContainer);
 });
-
-let slideIndex = 1;
-function plusDivs(n) {
-  showDivs((slideIndex += n));
-}
-
-function showDivs(n) {
-  let i;
-  let x = document.getElementsByClassName("imgSlide");
-  if (n > x.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = x.length;
-  }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex - 1].style.display = "block";
-}
