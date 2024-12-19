@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
   showSlide(currentSlide);
 
   const buttonContainer = document.createElement("div");
-  buttonContainer.className = "w3-section";
+  buttonContainer.className = "button";
   buttonContainer.innerHTML = `
         <button onclick="plusDivs(-1)">❮ Prev</button>
         <button onclick="plusDivs(1)">Next ❯</button>`;
