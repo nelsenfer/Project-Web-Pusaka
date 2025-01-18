@@ -1,7 +1,7 @@
 const keriss = [
   {
     nama: "DAPUR BROJOL",
-    isi: "Sampai saat ini, beberapa masyarakat meyakini bahwa keris brojol manfaatnya sangat besar dalam proses kelahiran. Padahal, keris ini memiliki filosofi penting tentang kehidupan sekaligus sejumlah makna spiritual yang dapat dijadikan sebagai pegangan hidup.Tidak hanya untuk proses kelahiran, filosofi keris brojol diharapkan pada pemilik keris ini dapat dilancarkan secara urusannya, termasuk lancar dalam mencari rezeki.",
+    isi: "Sampai saat ini, beberapa masyarakat meyakini bahwa keris brojol manfaatnya sangat besar dalam proses kelahiran. Padahal, keris ini memiliki filosofi penting tentang kehidupan sekaligus sejumlah makna spiritual yang dapat dijadikan sebagai pegangan hidup.",
     img: "../img/DAPUR BROJOL.jpg",
   },
   {
@@ -11,11 +11,47 @@ const keriss = [
   },
 ];
 
-//iju coba card
+// Function to generate cards
+function generateCards() {
+  const container = document.getElementById("container-card");
+  keriss.forEach((item) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<h3>${item.nama}</h3>`;
+    card.onclick = () => {
+      window.location.href = `detail.html?nama=${encodeURIComponent(
+        item.nama
+      )}`;
+    };
+    container.appendChild(card);
+  });
+}
 
-// import { keriss } from "./librari.js";
+// Call the function to generate cards when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", generateCards);
 
-console.log(keriss);
+// Function to display keris details based on query parameter
+function displayKerisDetails() {
+  const params = new URLSearchParams(window.location.search);
+  const namaKeris = params.get("nama");
+
+  const kerisDetail = keriss.find((keris) => keris.nama === namaKeris);
+  if (kerisDetail) {
+    const detailContainer = document.getElementById("detail-container");
+    const detailContent = `
+      <h2>${kerisDetail.nama}</h2>
+      <p>${kerisDetail.isi}</p>
+      <img src="${kerisDetail.img}" alt="${kerisDetail.nama}">
+    `;
+    detailContainer.innerHTML = detailContent;
+  } else {
+    document.getElementById("detail-container").innerHTML =
+      "<p>Keris tidak ditemukan.</p>";
+  }
+}
+
+// Call the function to display details when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", displayKerisDetails);
 
 let currentSlide = 0;
 
@@ -67,4 +103,32 @@ document.addEventListener("DOMContentLoaded", function () {
   slideitem.appendChild(buttonContainer);
 });
 
-//daftar card
+// Function to search for keris by name
+function searchKeris() {
+  const searchInput = document
+    .getElementById("search-input")
+    .value.toLowerCase();
+  const filteredKeris = keriss.filter((keris) =>
+    keris.nama.toLowerCase().includes(searchInput)
+  );
+
+  // Clear existing cards
+  const container = document.getElementById("container-card");
+  container.innerHTML = ""; // Clear existing cards
+
+  // Generate new cards based on search results
+  filteredKeris.forEach((item) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<h3>${item.nama}</h3>`;
+    card.onclick = () => {
+      window.location.href = `detail.html?nama=${encodeURIComponent(
+        item.nama
+      )}`;
+    };
+    container.appendChild(card);
+  });
+}
+
+// Event listener for search input
+document.getElementById("search-input").addEventListener("input", searchKeris);
