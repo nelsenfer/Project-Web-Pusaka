@@ -7,7 +7,7 @@
 }
 
 body{
-    background-image: url(img/background.jpg);
+    /* background-image: url(../img/background.jpg); */
 }
 
 a{
@@ -29,7 +29,7 @@ a{
 }
 .navbar .menu> a{
     font-size: 30px;
-    color: #eee;
+    color:black;
     margin-right: 40px;
 }
 
@@ -105,6 +105,38 @@ button:hover {
     background-color: #45a049; 
 }
 
+
+/*daftar.css */
+
+
+
+
+
+
+.warp-card{
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+}
+.card:hover {
+    background-color: #f0f0f0;
+}
+
+.detail {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
 
 @media (max-width: 768px) {
