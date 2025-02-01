@@ -57,7 +57,9 @@ function generateCards() {
   keriss.forEach((item) => {
     const card = document.createElement("div");
     card.className = "card";
-    card.innerHTML = `<h3>${item.nama}</h3>`;
+    card.innerHTML = `
+    <h3>${item.nama}</h3>
+    <img src="..${item.img}" alt="${item.nama}" class="img_card">`;
     card.onclick = () => {
       window.location.href = `detail.html?nama=${encodeURIComponent(
         item.nama
