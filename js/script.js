@@ -112,7 +112,6 @@ function showSlide(index) {
   keterangan.innerHTML = `
       <h2>${keriss[index].nama}</h2>
       <p>${keriss[index].isi}</p>`;
-
   const deskripsi = document.getElementById("deskripsi");
   deskripsi.innerHTML = "";
   deskripsi.appendChild(keterangan);
@@ -162,7 +161,9 @@ function searchKeris() {
   filteredKeris.forEach((item) => {
     const card = document.createElement("div");
     card.className = "card";
-    card.innerHTML = `<h3>${item.nama}</h3>`;
+    card.innerHTML = `
+    <h2>${item.nama}</h2>
+    <img src="..${item.img}" alt="${item.nama}" class="img_card">`; // Corrected image source
     card.onclick = () => {
       window.location.href = `detail.html?nama=${encodeURIComponent(
         item.nama
