@@ -137,5 +137,8 @@ function searchKeris() {
 // Event listener for search input
 document.getElementById("search-input").addEventListener("input", searchKeris);
 
+// Expose the plusDivs function to the global scope
+window.plusDivs = plusDivs;
+
 //see more
 function seeMore() {}
