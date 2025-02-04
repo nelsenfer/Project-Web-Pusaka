@@ -1,55 +1,4 @@
-const keriss = [
-  {
-    nama: "DAPUR BROJOL",
-    isi: "Sampai saat ini, beberapa masyarakat meyakini bahwa keris brojol manfaatnya sangat besar dalam proses kelahiran. Padahal, keris ini memiliki filosofi penting tentang kehidupan sekaligus sejumlah makna spiritual yang dapat dijadikan sebagai pegangan hidup.",
-    img: "/img/DAPUR BROJOL.jpg",
-  },
-  {
-    nama: "Keris Dua",
-    isi: "Keris ini dikenal dengan keindahan pamornya yang unik. Banyak yang percaya bahwa keris ini membawa keberuntungan dan perlindungan bagi pemiliknya.",
-    img: "/img/keris 2.jpg",
-  },
-  {
-    nama: "Keris Tiga",
-    isi: "Keris ini memiliki bentuk yang elegan dan sering dikaitkan dengan kekuatan spiritual. Dipercaya dapat membantu pemiliknya dalam mengambil keputusan penting.",
-    img: "/img/DAPUR BROJOL.jpg",
-  },
-  {
-    nama: "Keris Empat",
-    isi: "Keris ini memiliki sejarah panjang dan sering digunakan dalam upacara adat. Banyak yang meyakini bahwa keris ini memiliki kekuatan magis.",
-    img: "/img/DAPUR BROJOL.jpg",
-  },
-  {
-    nama: "Keris Lima",
-    isi: "Keris ini dikenal dengan bilahnya yang tajam dan motif pamor yang indah. Dipercaya dapat memberikan keberanian dan keteguhan hati.",
-    img: "/img/DAPUR BROJOL.jpg",
-  },
-  {
-    nama: "Keris Enam",
-    isi: "Keris ini sering dikaitkan dengan kekuatan alam dan spiritual. Banyak yang meyakini bahwa keris ini dapat membantu pemiliknya menghadapi rintangan hidup.",
-    img: "/img/DAPUR BROJOL.jpg",
-  },
-  {
-    nama: "Keris Tujuh",
-    isi: "Keris ini memiliki bentuk yang unik dan sering digunakan sebagai pusaka keluarga. Dipercaya dapat membawa kedamaian dan harmoni.",
-    img: "/img/DAPUR BROJOL.jpg",
-  },
-  {
-    nama: "Keris Delapan",
-    isi: "Keris ini dikenal dengan kekuatan spiritualnya yang tinggi. Banyak yang meyakini bahwa keris ini dapat melindungi pemiliknya dari energi negatif.",
-    img: "/img/DAPUR BROJOL.jpg",
-  },
-  {
-    nama: "Keris Sembilan",
-    isi: "Keris ini memiliki pamor yang indah dan sering dikaitkan dengan kebijaksanaan. Dipercaya dapat membantu pemiliknya dalam menyelesaikan masalah.",
-    img: "/img/DAPUR BROJOL.jpg",
-  },
-  {
-    nama: "Keris Sepuluh",
-    isi: "Keris ini merupakan simbol kekuatan dan keteguhan. Banyak yang meyakini bahwa keris ini dapat memberikan motivasi dan semangat dalam menghadapi tantangan.",
-    img: "/img/DAPUR BROJOL.jpg",
-  },
-];
+import { keriss } from "./librari.js";
 
 // Function to generate cards
 function generateCards() {
@@ -109,12 +58,24 @@ function plusDivs(n) {
 
 function showSlide(index) {
   const keterangan = document.createElement("div");
+  const truncatedIsi = keriss[index].isi.substring(0, 100) + "..."; // Display only the first 100 characters
   keterangan.innerHTML = `
       <h2>${keriss[index].nama}</h2>
-      <p>${keriss[index].isi}</p>`;
+      <p>${truncatedIsi}</p>`;
   const deskripsi = document.getElementById("deskripsi");
   deskripsi.innerHTML = "";
+
+  const seeMore = document.createElement("button");
+  seeMore.innerHTML = "See More";
+  seeMore.addEventListener("click", () => {
+    // Update the URL and reload the page to call displayKerisDetails
+    window.location.href = `./html/detail.html?nama=${encodeURIComponent(
+      keriss[index].nama
+    )}`;
+  });
+
   deskripsi.appendChild(keterangan);
+  deskripsi.appendChild(seeMore);
 
   // Menampilkan gambar yang sesuai dengan slide saat ini
   let x = document.getElementsByClassName("imgSlide");
@@ -175,3 +136,6 @@ function searchKeris() {
 
 // Event listener for search input
 document.getElementById("search-input").addEventListener("input", searchKeris);
+
+//see more
+function seeMore() {}

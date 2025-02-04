@@ -179,7 +179,7 @@ button:hover {
 
 /* Footer Styles */
 footer {
-    position: fixed; /* Change to fixed */
+    position: relative; /* Change to fixed */
     bottom: 0; /* Stick to the bottom */
     left: 0; /* Align to the left */
     right: 0; /* Align to the right */
@@ -192,7 +192,7 @@ footer {
 @font-feature-valuesmedia (max-width: 768px) {
     .deskripsi, .slide {
         right: 10%; /* Jarak dari kanan */
-    }
+}
 
     .content {
         margin-left: 20px; /* Mengurangi margin untuk konten */
