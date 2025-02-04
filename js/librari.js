@@ -50,5 +50,3 @@ const keriss = [
     img: "/img/DAPUR BROJOL.jpg",
   },
 ];
-
-export { keriss };
