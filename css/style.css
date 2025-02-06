@@ -238,6 +238,18 @@ footer {
         padding: 4px 4px; /* Even smaller padding for small screens */
         font-size: 8px; /* Smaller font size */
     }
+
+    .card{
+        font-size: 7px;
+        height: 140px;
+        width: 80px; 
+    }
+
+
+    .img_card {
+        width: 70px;
+        height: 130px;
+    }
 }
 
 @media (max-width: 400px) {

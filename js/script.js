@@ -109,7 +109,7 @@ function plusDivs(n) {
 
 function showSlide(index) {
   const keterangan = document.createElement("div");
-  const truncatedIsi = keriss[index].isi.substring(0, 500) + "..."; // Display only the first 100 characters
+  const truncatedIsi = keriss[index].isi.substring(0, 250) + "..."; // Display only the first 100 characters
   keterangan.innerHTML = `
       <h2>${keriss[index].nama}</h2>
       <p>${truncatedIsi}</p>`;
