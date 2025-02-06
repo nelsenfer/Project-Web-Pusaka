@@ -72,16 +72,11 @@ a {
     overflow: hidden; /* Prevent overflow */
 }
 
-.card img {
-    max-width: 100%; /* Ensure the image fits within the card */
-    height: auto; /* Maintain aspect ratio */
-}
 
 /* Other existing styles... */
 .container-content .main-content {
     display: flex;
     justify-content: space-evenly;
-    margin: 20px;
 }
 
 .container-content .main-content .deskripsi {
@@ -108,6 +103,7 @@ a {
 .warp-imgSlide {
     border-radius: 20px;
     max-width: 200px;
+    align-items: center;
 }
 
 .warp-imgSlide > img {
@@ -115,8 +111,9 @@ a {
 }
 
 .imgSlide {
-    width: 90%;
-    height: auto;
+    width: 100%;
+    min-width: 30px;
+    max-height: 360px;
 }
 
 .button {
@@ -125,7 +122,7 @@ a {
 }
 
 button {
-    padding: 10px 15px; 
+    padding: 6px 10px; /* Smaller padding */
     margin: 5px; 
     background-color: #4CAF50; 
     color: white; 
@@ -168,6 +165,7 @@ button:hover {
 }
 .img_card {
     width: 140px;
+    height: 260px;
 }
 
 .detail {
@@ -189,10 +187,10 @@ footer {
     padding: 10px 0;
     width: 100%; /* Ensure it spans the full width */
 }
-@font-feature-valuesmedia (max-width: 768px) {
+@media (max-width: 768px) {
     .deskripsi, .slide {
-        right: 10%; /* Jarak dari kanan */
-}
+        right: 10%; /* Jarak dari kanan */}
+
 
     .content {
         margin-left: 20px; /* Mengurangi margin untuk konten */
@@ -201,20 +199,85 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .navbar{
+        margin: 4px 0px 4px 0px
+    }
+
+    .article {
+        padding-top: 4px;
+        margin-top: 4px;
+    }
+
+    body{
+        font-size: 8px;
+    }
     .navbar .menu> a{
         font-size: 18px;
     }
 
     .slide{
         width: 100px;
+        min-height: 100px;
     }
 
     .deskripsi{
-        width: 200px;
+        min-width: 30px;
+        max-width: 140px;
+    }
+
+    .imgSlide {
+        max-height: 200px;
     }
 
     .content {
         margin-left: 10px; /* Mengurangi margin untuk konten */
         margin-right: 10px; /* Mengurangi margin untuk konten */
+    }
+
+    button {
+        padding: 4px 4px; /* Even smaller padding for small screens */
+        font-size: 8px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar{
+        margin: 2px 0px 2px 0px
+    }
+
+    .article {
+        padding-top: 2px;
+        margin-top: 2px;
+    }
+
+    body{
+        font-size: 8px;
+    }
+    .navbar .menu> a{
+        font-size: 16px;
+    }
+
+    .slide{
+        width: 80px;
+        min-height: 80px;
+    }
+
+    .deskripsi{
+        min-width: 20px;
+        max-width: 120px;
+    }
+
+    .imgSlide {
+        max-height: 150px;
+    }
+
+    .content {
+        margin-left: 5px; /* Mengurangi margin untuk konten */
+        margin-right: 5px; /* Mengurangi margin untuk konten */
+    }
+
+    button {
+        padding: 2px 2px; /* Even smaller padding for small screens */
+        font-size: 6px; /* Smaller font size */
     }
 }
