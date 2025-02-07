@@ -188,13 +188,55 @@ footer {
     width: 100%; /* Ensure it spans the full width */
 }
 @media (max-width: 768px) {
-    .deskripsi, .slide {
-        right: 10%; /* Jarak dari kanan */}
+    .navbar{
+        margin: 8px 0px 8px 0px;
+    }
 
+    .article {
+        padding-top: 8px;
+        margin-top: 8px;
+    }
+
+    body{
+        font-size: 10px;
+    }
+    .navbar .menu> a{
+        font-size: 20px;
+    }
+
+    .slide{
+        width: 150px;
+        min-height: 150px;
+    }
+
+    .deskripsi{
+        min-width: 50px;
+        max-width: 180px;
+    }
+
+    .imgSlide {
+        max-height: 250px;
+    }
 
     .content {
-        margin-left: 20px; /* Mengurangi margin untuk konten */
-        margin-right: 20px; /* Mengurangi margin untuk konten */
+        margin-left: 15px; /* Mengurangi margin untuk konten */
+        margin-right: 15px; /* Mengurangi margin untuk konten */
+    }
+
+    button {
+        padding: 5px 8px; /* Slightly larger padding for medium screens */
+        font-size: 10px; /* Slightly larger font size */
+    }
+
+    .card{
+        font-size: 9px;
+        height: 180px;
+        width: 120px; 
+    }
+
+    .img_card {
+        width: 100px;
+        height: 160px;
     }
 }
 
