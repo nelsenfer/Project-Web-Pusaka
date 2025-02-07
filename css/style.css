@@ -72,9 +72,16 @@ a {
     overflow: hidden; /* Prevent overflow */
 }
 
+.card h3 {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis (...) to indicate overflow */
+}
 
 /* Other existing styles... */
 .container-content .main-content {
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -175,6 +182,35 @@ button:hover {
     border-radius: 5px;
 }
 
+/*detail-warp*/
+.detail-container{
+    text-align: center;
+}
+
+.detail-warp{
+    display: flex;
+
+}
+
+.detail-warp img{
+    max-width: 400px;
+    height: 800px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.detail-info{
+    text-align: left;
+}
+
+.detail-category{
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
 /* Footer Styles */
 footer {
     position: relative; /* Change to fixed */
@@ -238,6 +274,10 @@ footer {
         width: 100px;
         height: 160px;
     }
+
+    .detail-warp img{
+        height: 400px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -292,6 +332,9 @@ footer {
         width: 70px;
         height: 130px;
     }
+    .detail-warp img{
+        height: 350px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -333,5 +376,9 @@ footer {
     button {
         padding: 2px 2px; /* Even smaller padding for small screens */
         font-size: 6px; /* Smaller font size */
+    }
+
+    .detail-warp img{
+        height: 300px;
     }
 }
