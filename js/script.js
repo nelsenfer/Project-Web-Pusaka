@@ -31,13 +31,13 @@ const keriss = [
   },
   {
     nama: "DAPUR JALAK SANGU TUMPENG (JST) ",
-    isi: "Keris ini memiliki sejarah panjang dan sering digunakan dalam upacara adat. Banyak yang meyakini bahwa keris ini memiliki kekuatan magis.",
+    isi: "Keris JST Jalak Sangu Tumpeng Sepuh merupakan salah satu dari ratusan koleksi pusaka keris kami. Keris ini termasuk dalam golongan jenis keris lurus. Jika dilihat dari bentuk dan ricikannya, keris ini berdhapur JST (Jalak Sangu Tumpeng). Untuk pamor yang tergurat di bilahnya adalah pamor Wos Wutah. Warangka memakai model Gayaman dari bahan kayu Timoho. Nampak sangat pas dan serasi dengan bilahnya yang layak untuk menjadi koleksi anda. Untuk perkiraan masa pembuatannya keris ini dibuat di era Mataram Senopaten sekitar abad ke-15 Masehi. Tentu saja keris ini tergolong dalam keris sepuh dengan usianya sudah ratusan tahun.",
     Dapur: "Brojol",
     Lok: "Lurus",
     Pamor: "Ngulit Semongko",
     EstimasiTangguh: "Majapahit",
     Warangka: "Gayaman Surakarta, Kayu Timoho, Pendok Kuningan",
-    img: "/img/DAPUR BROJOL.jpg",
+    img: "/img/DAPUR JALAK SANGU TUMPENG (JST).jpg",
   },
   {
     nama: "DAPUR SEMPANER",
@@ -48,7 +48,7 @@ const keriss = [
     EstimasiTangguh: "Majapahit AkhirEra Mataram  ",
     Warangka:
       "Gayam Surakarta, Kayu Trembalo, Pendok Pendok Mamas Cukit Lawasan.",
-    img: "/img/DAPUR BROJOL.jpg",
+    img: "/img/DAPUR SEMPANER.jpg",
   },
   {
     nama: "DAPUR PANDAWA CINARITO ",
@@ -58,7 +58,7 @@ const keriss = [
     Pamor: "Wahyu Temurun ",
     EstimasiTangguh: "Mataram Hamengkubawana III ",
     Warangka: "Gayaman Surakarta, Kayu Trembalo, Pendok Kuningan Blew",
-    img: "/img/DAPUR BROJOL.jpg",
+    img: "/img/DAPUR PANDAWA CINARITO .jpg",
   },
   {
     nama: "DAPUR JALAK NGORE",
@@ -68,7 +68,7 @@ const keriss = [
     Pamor: "Ngulit Semongko Dan Kol Buntet",
     EstimasiTangguh: "Era MataramWarangka",
     Warangka: "Gayam Surakarta , Kayu Timoho, Pendok Kuningan",
-    img: "/img/DAPUR BROJOL.jpg",
+    img: "/img/DAPUR JALAK NGORE.jpg",
   },
   {
     nama: "Keris Delapan",
@@ -131,10 +131,23 @@ function displayKerisDetails() {
   const kerisDetail = keriss.find((keris) => keris.nama === namaKeris);
   if (kerisDetail) {
     const detailContainer = document.getElementById("detail-container");
+    // Display keris details
     const detailContent = `
       <h2>${kerisDetail.nama}</h2>
-      <p>${kerisDetail.isi}</p>
-      <img src="..${kerisDetail.img}" alt="${kerisDetail.nama}">
+      <div class="detail-warp">
+        <img src="..${kerisDetail.img}" alt="${kerisDetail.nama}">
+        <div class="detail-info">
+          <div class="detail-category">
+            <h3>Nama : ${kerisDetail.nama}</h3>
+            <p>Dapur : ${kerisDetail.Dapur}</p>
+            <p>Lok : ${kerisDetail.Lok}</p>
+            <p>Pamor : ${kerisDetail.Pamor}</p>
+            <p>Estimasi Tangguh : ${kerisDetail.EstimasiTangguh}</p>
+            <p>Warangka : ${kerisDetail.Warangka}</p>
+          </div>
+          <p>${kerisDetail.isi}</p>
+        </div>
+      </div>
     `;
     detailContainer.innerHTML = detailContent;
   } else {
