@@ -173,7 +173,7 @@ function plusDivs(n) {
 
 function showSlide(index) {
   const keterangan = document.createElement("div");
-  const truncatedIsi = keriss[index].isi.substring(0, 250) + "..."; // Display only the first 100 characters
+  const truncatedIsi = keriss[index].isi.substring(0, 250) + "..."; // Display only the first 250 characters
   keterangan.innerHTML = `
       <h2>${keriss[index].nama}</h2>
       <p>${truncatedIsi}</p>`;
@@ -248,11 +248,7 @@ function searchKeris() {
   });
 }
 
-// Event listener for search input
-document.getElementById("search-input").addEventListener("input", searchKeris);
-
-// taentang
-
+// Initialize collapsible menus
 document.addEventListener("DOMContentLoaded", function () {
   const menus = [
     {
@@ -291,6 +287,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const collapsibles = document.querySelectorAll(".collapsible");
+
+  console.log(collapsibles.length);
   collapsibles.forEach((coll) => {
     coll.addEventListener("click", function () {
       this.classList.toggle("active");
@@ -303,3 +301,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Event listener for search input
+document.getElementById("search-input").addEventListener("input", searchKeris);
