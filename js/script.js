@@ -250,3 +250,56 @@ function searchKeris() {
 
 // Event listener for search input
 document.getElementById("search-input").addEventListener("input", searchKeris);
+
+// taentang
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menus = [
+    {
+      title: "tentang",
+      content:
+        "<p>Web ini dirancang untuk memberikan informasi mendalam tentang keris, sebuah senjata tradisional yang memiliki nilai seni dan spiritual tinggi di Indonesia. <u>Melalui web ini, kami berusaha untuk melestarikan dan mempromosikan warisan budaya keris kepada masyarakat luas.</u> Anda dapat menemukan berbagai jenis keris dengan deskripsi, sejarah, dan filosofi di balik setiap jenisnya. Selain itu, kami juga menyediakan informasi tentang tim yang bekerja di balik layar untuk memastikan bahwa setiap konten yang disajikan akurat dan bermanfaat. Kami berharap web ini dapat menjadi sumber informasi yang berguna bagi para penggemar keris dan masyarakat umum yang ingin mengetahui lebih banyak tentang warisan budaya Indonesia.</p>",
+    },
+    {
+      title: "Visi dan Misi",
+      content:
+        "<h2>Visi</h2><p>Menjadi pusat informasi terdepan tentang keris dan warisan budaya Indonesia, serta menjadi sumber inspirasi bagi generasi muda untuk melestarikan dan menghargai budaya bangsa.</p><h2>Misi</h2><ul><li>Menyediakan informasi yang akurat dan mendalam tentang keris dan warisan budaya Indonesia.</li><li>Mempromosikan keris sebagai bagian penting dari budaya Indonesia melalui berbagai media dan kegiatan.</li><li>Mendorong partisipasi masyarakat dalam melestarikan dan mempelajari keris.</li><li>Membangun komunitas yang peduli dan aktif dalam menjaga warisan budaya keris.</li><li>Berinovasi dalam penyajian informasi untuk menarik minat generasi muda.</li></ul>",
+    },
+    {
+      title: "Team",
+      content:
+        "<p>SMK SORE Tulungagung XII TKJ 1 24/25</p><br><p>guru pembimbing : Pak FERIAWAN, S.Pd., MT.</p><br><p>Project Manager <br>- Nelsen (koordinator) <br>- Naim <br><br>UI/UX Desainer <br>- Hadzig (koordinator)<br>- Iqbal <br><br>Front-end<br>- Nelsen (koordinator)<br>- Rendi<br>- Novan<br><br>Back-end<br>- Naim (koordinator)<br><br>Proposal dan dokumentasi<br>- Dito (koordinator)<br>- Rega<br>- Rindi<br>- Nindi<br>- Ulum<br><br>Bahasa pemersatu bangsa : JavaScript</p>",
+    },
+    {
+      title: "kritik dan saran",
+      content:
+        '<p>Untuk kritik dan saran terkait web,keris, dan lain lainnya silakan langsung menghubungi email yang bersangkutan <a href="mailto:nelsenfe17@gmail.com" class="mailto-link">klik disini</a></p>',
+    },
+  ];
+
+  const container = document.getElementById("collapsible-menus");
+  menus.forEach((menu) => {
+    const menuDiv = document.createElement("div");
+    menuDiv.className = "collapsible-menu";
+    menuDiv.innerHTML = `
+          <div class="collapsible">${menu.title}</div>
+          <div class="content">
+              ${menu.content}
+          </div>
+      `;
+    container.appendChild(menuDiv);
+  });
+
+  const collapsibles = document.querySelectorAll(".collapsible");
+  collapsibles.forEach((coll) => {
+    coll.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+});

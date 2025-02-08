@@ -21,6 +21,15 @@ a {
     color: #eee;
 }
 
+/* Add this section for blue links */
+a.mailto-link {
+    color: blue;
+}
+
+a.mailto-link:hover {
+    text-decoration: underline;
+}
+
 /* navigasi */
 
 .navbar {
@@ -229,6 +238,57 @@ footer {
     padding: 10px 0;
     width: 100%; /* Ensure it spans the full width */
 }
+
+.collapsible-menus {
+    margin-bottom: 400px;
+}
+
+.collapsible-menu {
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.collapsible {
+    height: 50px;
+    background-color: #f4f4f4; /* Light gray for menu */
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust to space between */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.active, .collapsible:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fafafa; /* Slightly lighter gray for content */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    margin: 0;
+    border-top: none;
+    opacity: 0; /* Ensure content is hidden by default */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 0 0 5px 5px; /* Rounded corners */
+}
+
+.content p, ul{
+    padding: 20px;
+}
+
+.collapsible.active + .content {
+    max-height: 1000px; /* Set a large max-height to allow for content expansion */
+    opacity: 1; /* Show content when the menu is active */
+}
+
 @media (max-width: 768px) {
     .navbar{
         margin: 8px 0px 8px 0px;
@@ -258,11 +318,6 @@ footer {
 
     .imgSlide {
         max-height: 250px;
-    }
-
-    .content {
-        margin-left: 15px; /* Mengurangi margin untuk konten */
-        margin-right: 15px; /* Mengurangi margin untuk konten */
     }
 
     button {
@@ -317,10 +372,6 @@ footer {
         max-height: 200px;
     }
 
-    .content {
-        margin-left: 10px; /* Mengurangi margin untuk konten */
-        margin-right: 10px; /* Mengurangi margin untuk konten */
-    }
 
     button {
         padding: 4px 4px; /* Even smaller padding for small screens */
@@ -374,10 +425,6 @@ footer {
         max-height: 150px;
     }
 
-    .content {
-        margin-left: 5px; /* Mengurangi margin untuk konten */
-        margin-right: 5px; /* Mengurangi margin untuk konten */
-    }
 
     button {
         padding: 2px 2px; /* Even smaller padding for small screens */
