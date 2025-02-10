@@ -13,7 +13,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: #dd9933;
+    background-color: #E3C567;
 }
 
 a {
@@ -33,13 +33,14 @@ a.mailto-link:hover {
 /* navigasi */
 
 .navbar {
-    margin: 20px 0px 20px 30px;
+    padding: 20px 0px 20px 30px;
     width: 100%; /* Mengatur lebar navbar menjadi 100% */
     height: 60px;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 100;
+    background-color:#C8963E ;
     border-bottom: 2px solid black; /* Black border at the bottom */
 }
 
@@ -67,25 +68,10 @@ a.mailto-link:hover {
     flex: 1; /* This will allow the article to take up available space */
 }
 
-/* Card Styles */
-.card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    cursor: pointer;
-    text-align: center;
-    display: inline-block;
-    width: 180px; /* Fixed width */
-    height: 300px; /* Fixed height */
-    overflow: hidden; /* Prevent overflow */
+.article h1{
+    color: #573D1C;
 }
 
-.card h3 {
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Add ellipsis (...) to indicate overflow */
-}
 
 /* Other existing styles... */
 .container-content .main-content {
@@ -114,6 +100,10 @@ a.mailto-link:hover {
     padding: 20px; 
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.deskripsi h2{
+    color: #573D1C;
 }
 
 .warp-imgSlide {
@@ -155,10 +145,19 @@ button:hover {
 
 .container-card{
     padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .Search {
     margin-left: 20px;
+}
+
+#search-input{
+    width: 30%;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .warp-card {
@@ -166,7 +165,7 @@ button:hover {
 }
 
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #573D1C;
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
@@ -175,11 +174,21 @@ button:hover {
     display: inline-block;
     width: 200px; /* Fixed width */
     height: 300px; /* Fixed height */
+    overflow: hidden; /* Prevent overflow */
 }
 .card:hover {
     background-color: #f0f0f0;
 }
+
+.card h3{
+    color: #573D1C;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis (...) to indicate overflow */
+}
+
 .img_card {
+    border-radius: 5px;
     width: 140px;
     height: 260px;
 }
@@ -193,6 +202,7 @@ button:hover {
 
 /*detail-warp*/
 .detail-container{
+    color: #573D1C;
     text-align: center;
     margin-bottom: 200px;
 }
@@ -241,6 +251,7 @@ footer {
 
 .collapsible-menus {
     margin-bottom: 400px;
+    margin-top: 30px;
 }
 
 .collapsible-menu {
@@ -282,6 +293,11 @@ footer {
 
 .content p, ul{
     padding: 20px;
+}
+
+.content h2{
+    padding: 20px;
+    text-align: center;
 }
 
 .collapsible.active + .content {
