@@ -85,7 +85,11 @@ article h1 {
     }
     
     .page1 {
+<<<<<<< HEAD
         /* height: 80vh; */
+=======
+        height: 80vh;
+>>>>>>> a7dfe844a42e899dcf1eb19ca7a6efb04d02ec8e
         padding: 25px 0 30px 0;
         display: flex;
         justify-content: space-between;
@@ -98,9 +102,15 @@ article h1 {
     .page1 .right {
         width: 65%;
     }
+<<<<<<< HEAD
     .page2 {
     height: 85vh;
     }
+=======
+                                                .page2 {
+                                                    height: 85vh;
+                                                }
+>>>>>>> a7dfe844a42e899dcf1eb19ca7a6efb04d02ec8e
 
 /* Other existing styles... */
 .container-content .main-content {
@@ -331,7 +341,11 @@ footer {
     opacity: 1; /* Show content when the menu is active */
 }
 
+<<<<<<< HEAD
 @media (max-width: 860px) {
+=======
+@media (max-width: 768px) {
+>>>>>>> a7dfe844a42e899dcf1eb19ca7a6efb04d02ec8e
     /* .navbar{
         margin: 8px 0px 8px 0px;
     */
@@ -382,6 +396,7 @@ footer {
         height: 400px;
     }
 
+<<<<<<< HEAD
     .page1 {
         display: block; /* Ubah dari flex menjadi block */
     }
@@ -401,6 +416,13 @@ footer {
         margin: 4px 0px 4px 0px
     */
 
+=======
+@media (max-width: 480px) {
+    /* .navbar{
+        margin: 4px 0px 4px 0px
+    */
+
+>>>>>>> a7dfe844a42e899dcf1eb19ca7a6efb04d02ec8e
     article {
         padding-top: 4px;
         margin-top: 4px;
