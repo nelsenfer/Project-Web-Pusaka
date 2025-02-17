@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", serif;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #FCE7C8;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+/* Add this section for blue links */
+a.mailto-link {
+    color: blue;
+}
+
+a.mailto-link:hover {
+    text-decoration: underline;
+}
+
+/* navigasi */
+.navback {
+    width: 100%;
+    height: 65px;
+}
+
+.navbar {
+    width: 100%;
+        height: 40px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    background-color: #FADA7A;
+    border-bottom: 2px solid black; /* Black border at the bottom */
+}
+
+.navbar .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.navbar .menu a {
+    color: black;
+        /* Changed to white */
+    padding: 0 10px;
+    font-size: 20px; /* Adjusted font size */
+    height: fit-content;
+}
+
+.navbar .menu a:hover {
+    color: #eee;
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.navbar .menu img {
+    width: 35px;
+    margin-right: 10px;
+}
+article {
+    padding: 0 30px;
+    flex: 1; /* This will allow the article to take up available space */
+}
+
+article h1 {
+    color: #573D1C;
+    font-size: 2rem;
+    }
+    
+    .page1 {
+        /* height: 80vh; */
+        padding: 25px 0 30px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .page1 .left {
+        width: 30%;
+    }
+    
+    .page1 .right {
+        width: 65%;
+    }
+
+    .page2 {
+    height: 85vh;
+    }
+
+/* Other existing styles... */
+.container-content .main-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-content .main-content .deskripsi {
+    width: 400px; /* Lebar elemen */
+    background-color: rgba(255, 255, 255, 0.9); /* Warna latar belakang dengan transparansi */
+    padding: 10px 20px;
+        /* Padding di dalam elemen */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.slide {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    min-height: 360px;
+    width: 200px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.deskripsi h2{
+    color: #573D1C;
+}
+
+.warp-imgSlide {
+    border-radius: 20px;
+    max-width: 200px;
+    align-items: center;
+}
+
+.warp-imgSlide > img {
+    mix-blend-mode: multiply;
+}
+
+.imgSlide {
+    width: 100%;
+    min-width: 30px;
+    max-height: 360px;
+}
+
+.button {
+    margin-top: 0px;
+    position: relative;
+}
+
+button {
+    padding: 6px 10px; /* Smaller padding */
+    margin: 5px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+} 
+
+button:hover {
+    background-color: #45a049; 
+}
+
+/*daftar.css */
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Search {
+    margin-left: 20px;
+}
+
+#search-input{
+    width: 30%;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.warp-card {
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #573D1C;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    width: 200px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    overflow: hidden; /* Prevent overflow */
+}
+.card:hover {
+    background-color: #f0f0f0;
+}
+
+.card h3{
+    color: #573D1C;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis (...) to indicate overflow */
+}
+
+.img_card {
+    border-radius: 5px;
+    width: 140px;
+    height: 260px;
+}
+
+.detail {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*detail-warp*/
+.detail-container{
+    margin-bottom: 200px;
+        padding-top: 75px;
+    color: #573D1C;
+    text-align: center;
+}
+
+.detail-warp{
+    display: flex;
+
+}
+
+.detail-warp img{
+    max-width: 400px;
+    height: 800px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.detail-info{
+    text-align: left;
+    margin: 20px 0px 20px 0px;
+}
+
+.detail-info p{
+    margin: 20px 0px 20px 0px;
+}
+
+.detail-category{
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+/* Footer Styles */
+footer {
+    position: relative; /* Change to fixed */
+    bottom: 0; /* Stick to the bottom */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    background-color: #333; 
+    color: white; 
+    text-align: center;
+    padding: 10px 0;
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.collapsible-menus {
+    margin-bottom: 400px;
+}
+
+.collapsible-menu {
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.collapsible {
+    height: 50px;
+    background-color: #f4f4f4; /* Light gray for menu */
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust to space between */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.active, .collapsible:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fafafa; /* Slightly lighter gray for content */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    margin: 0;
+    border-top: none;
+    opacity: 0; /* Ensure content is hidden by default */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 0 0 5px 5px; /* Rounded corners */
+}
+
+.content p, ul{
+    padding: 20px;
+}
+
+.content h2{
+    padding: 20px;
+    text-align: center;
+}
+
+.collapsible.active + .content {
+    max-height: 1000px; /* Set a large max-height to allow for content expansion */
+    opacity: 1; /* Show content when the menu is active */
+}
+
+@media (max-width: 860px) {
+    /* .navbar{
+        margin: 8px 0px 8px 0px;
+    */
+
+    article {
+        padding-top: 8px;
+        margin-top: 8px;
+    }
+
+    body{
+        font-size: 12px;
+    }
+    .navbar .menu> a{
+        font-size: 20px;
+    }
+
+    .slide{
+        width: 150px;
+        min-height: 150px;
+    }
+
+    .deskripsi{
+        min-width: 50px;
+        max-width: 180px;
+    }
+
+    .imgSlide {
+        max-height: 250px;
+    }
+
+    button {
+        padding: 5px 8px; /* Slightly larger padding for medium screens */
+        font-size: 10px; /* Slightly larger font size */
+    }
+
+    .card{
+        font-size: 9px;
+        height: 180px;
+        width: 120px; 
+    }
+
+    .img_card {
+        width: 100px;
+        height: 160px;
+    }
+
+    .detail-warp img{
+        height: 400px;
+    }
+
+    .page1 {
+        display: block; /* Ubah dari flex menjadi block */
+    }
+
+    .page1 .left {
+        width: 100%; /* Lebar 100% */
+        margin-bottom: 20px; /* Tambahkan margin bawah */
+    }
+
+    .page1 .right {
+        width: 100%; /* Lebar 100% untuk memastikan elemen di bawahnya juga menyesuaikan */
+    }
+}
+
+@media (max-width: 500px) {
+    article {
+        padding-top: 4px;
+        margin-top: 4px;
+    }
+
+    body{
+        font-size: 10px;
+    }
+    .navbar .menu> a{
+        font-size: 18px;
+    }
+
+    .slide{
+        width: 100px;
+        min-height: 100px;
+    }
+
+    .deskripsi{
+        min-width: 30px;
+        max-width: 140px;
+    }
+
+    .imgSlide {
+        max-height: 200px;
+    }
+
+
+    button {
+        padding: 4px 4px; /* Even smaller padding for small screens */
+        font-size: 8px; /* Smaller font size */
+    }
+
+    .card{
+        font-size: 7px;
+        height: 140px;
+        width: 80px; 
+    }
+
+
+    .img_card {
+        width: 70px;
+        height: 130px;
+    }
+    .detail-warp img{
+        height: 350px;
+    }
+}
+
+@media (max-width: 400px) {
+    /* .navbar{
+        margin: 2px 0px 2px 0px
+    */
+
+    article {
+        padding-top: 2px;
+        margin-top: 2px;
+    }
+
+    body{
+        font-size: 10px;
+    }
+    .navbar .menu> a{
+        font-size: 16px;
+    }
+
+    .slide{
+        width: 80px;
+        min-height: 80px;
+    }
+
+    .deskripsi{
+        min-width: 20px;
+        max-width: 120px;
+    }
+
+    .imgSlide {
+        max-height: 150px;
+    }
+
+
+    button {
+        padding: 2px 2px; /* Even smaller padding for small screens */
+        font-size: 6px; /* Smaller font size */
+    }
+
+    .detail-warp img{
+        height: 300px;
+    }
+}
